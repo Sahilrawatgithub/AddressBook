@@ -6,6 +6,7 @@
         static void Main(string[] args)
         {
             AddressBook addressBook = new AddressBook();
+            Console.WriteLine("I have done what UC5 wants me to do in previous use cases already, so i will just push this without changes");
             Console.WriteLine("Welcome to AddressBookManager, please adhere to following instructions to have a smooth experience");
             Console.WriteLine("Press 1 if you want to add a contact to the addressbook");
             Console.WriteLine("Press 2 if you want to edit existing contact and");
