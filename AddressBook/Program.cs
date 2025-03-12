@@ -8,7 +8,9 @@
             AddressBook addressBook = new AddressBook();
             Console.WriteLine("Welcome to AddressBookManager, please adhere to following instructions to have a smooth experience");
             Console.WriteLine("Press 1 if you want to add a contact to the addressbook");
-            Console.WriteLine("Press 2 to exit program");
+            Console.WriteLine("Press 2 if you want to edit existing contact and");
+            Console.WriteLine("Press 3 if you want to display contacts in addressbook");
+            Console.WriteLine("Press 3 to exit program");
 
             while (true)
             {
@@ -43,14 +45,25 @@
 
                         addressBook.Add(new Contact(FirstName, Lastname, Address, City, State, ZipCode, PhoneNumber, Email));
 
-                        Console.WriteLine("What do you want to do next?");
-
                         break;
+                   
+                    case "2":
+                        Console.Write("Enter First name of contact you want to edit : ");
+                        string fname=Console.ReadLine();
+                        addressBook.EditContact(fname);
 
-                        case "2":
+                    break;
+                        
+                    case "3":
+                        addressBook.Display();
+                        break;
+                    
+                    case "4":
                         return;
                        
                 }
+                Console.WriteLine("What do you want to do next?");
+                Console.WriteLine();
             }
 
         }
