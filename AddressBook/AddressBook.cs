@@ -59,6 +59,7 @@ namespace AddressBook
               
             }
         }
+
         public void EditContact(string contactame)
         {
             Console.WriteLine();
@@ -175,6 +176,19 @@ namespace AddressBook
             {
                 Console.WriteLine("No such contact found.");
             }
+        }
+        public void DeleteContact(string contactname)
+        {
+            foreach (var contact in contacts)
+            {
+                if (contact.FirstName == contactname)
+                {
+                    contacts.Remove(contact);
+                    Console.WriteLine($"{contactname} removed from AddressBook");
+                    return;
+                }              
+            }
+            Console.WriteLine("No such contact found");
         }
     }
 }

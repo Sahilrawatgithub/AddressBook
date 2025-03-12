@@ -10,7 +10,8 @@
             Console.WriteLine("Press 1 if you want to add a contact to the addressbook");
             Console.WriteLine("Press 2 if you want to edit existing contact and");
             Console.WriteLine("Press 3 if you want to display contacts in addressbook");
-            Console.WriteLine("Press 4 to exit program");
+            Console.WriteLine("Press 4 if you want to remove contact from addressbook");
+            Console.WriteLine("Press 5 to exit program");
 
             while (true)
             {
@@ -59,6 +60,12 @@
                         break;
                     
                     case "4":
+                        Console.Write("Enter firstname of contact you want to remove: ");
+                        string firstname=Console.ReadLine();
+                        addressBook.DeleteContact(firstname);
+                        break;
+
+                    case "5":
                         return;
                        
                 }
