@@ -50,25 +50,3 @@ By working on this project, you will gain hands-on experience in:
 | **UC 16** ✅ | Multi-Threading for Efficient I/O and Network Calls | `UC16_MultiThreading` |
 | **UC 17** ✅ | Save Address Book to Database (SQL Server/SQLite) | `UC17_DatabaseIntegration` |
 | **UC 18** ✅ | Display a Thank You Message | `UC18_ThankYou` |
-
----
-
-## 🛠️ Technologies & Libraries
-
-- **Language**: C#  
-- **IDE**: Visual Studio  
-- **Version Control**: Git  
-- **Libraries**:
-  - `CsvHelper` (for CSV file operations)
-  - `Newtonsoft.Json` (for JSON operations)
-- **Database**: SQL Server / SQLite  
-- **REST Client**: `HttpClient`  
-- **Threading**: `System.Threading.Tasks`
-
----
-
-## 💻 How to Run the Project Locally
-
-1. **Clone the Repository**  
-   ```bash
-   git clone https://github.com/yourusername/AddressBookSystem.git
