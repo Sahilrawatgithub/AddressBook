@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\BridgeLabz\\AddressBook\\AddressBook\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BB27B6F8-875F-42EC-B8C3-DA33C2793B10}|AddressBook.csproj|d:\\bridgelabz\\addressbook\\addressbook\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB27B6F8-875F-42EC-B8C3-DA33C2793B10}|AddressBook.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB27B6F8-875F-42EC-B8C3-DA33C2793B10}|AddressBook.csproj|d:\\bridgelabz\\addressbook\\addressbook\\addressbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB27B6F8-875F-42EC-B8C3-DA33C2793B10}|AddressBook.csproj|solutionrelative:addressbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB27B6F8-875F-42EC-B8C3-DA33C2793B10}|AddressBook.csproj|d:\\bridgelabz\\addressbook\\addressbook\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB27B6F8-875F-42EC-B8C3-DA33C2793B10}|AddressBook.csproj|solutionrelative:contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB27B6F8-875F-42EC-B8C3-DA33C2793B10}|AddressBook.csproj|d:\\bridgelabz\\addressbook\\addressbook\\iaddressbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB27B6F8-875F-42EC-B8C3-DA33C2793B10}|AddressBook.csproj|solutionrelative:iaddressbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IAddressBook.cs",
+              "DocumentMoniker": "D:\\BridgeLabz\\AddressBook\\AddressBook\\IAddressBook.cs",
+              "RelativeDocumentMoniker": "IAddressBook.cs",
+              "ToolTip": "D:\\BridgeLabz\\AddressBook\\AddressBook\\IAddressBook.cs",
+              "RelativeToolTip": "IAddressBook.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T05:43:16.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddressBook.cs",
+              "DocumentMoniker": "D:\\BridgeLabz\\AddressBook\\AddressBook\\AddressBook.cs",
+              "RelativeDocumentMoniker": "AddressBook.cs",
+              "ToolTip": "D:\\BridgeLabz\\AddressBook\\AddressBook\\AddressBook.cs",
+              "RelativeToolTip": "AddressBook.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAYwMcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T05:35:32.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Contact.cs",
+              "DocumentMoniker": "D:\\BridgeLabz\\AddressBook\\AddressBook\\Contact.cs",
+              "RelativeDocumentMoniker": "Contact.cs",
+              "ToolTip": "D:\\BridgeLabz\\AddressBook\\AddressBook\\Contact.cs",
+              "RelativeToolTip": "Contact.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAACcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T04:35:37.294Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\BridgeLabz\\AddressBook\\AddressBook\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\BridgeLabz\\AddressBook\\AddressBook\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAE0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T04:26:51.068Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
