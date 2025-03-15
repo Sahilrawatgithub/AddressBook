@@ -15,9 +15,18 @@ namespace AddressBook
         {
             Console.Write("Enter first name : ");
             string FirstName = Console.ReadLine();
+            
 
             Console.Write("Enter last name : ");
             string Lastname = Console.ReadLine();
+
+            if (contacts.Any(contact =>
+              contact.FirstName.Equals(FirstName, StringComparison.OrdinalIgnoreCase) &&
+              contact.LastName.Equals(Lastname, StringComparison.OrdinalIgnoreCase)))
+            {
+                Console.WriteLine($"Contact with the name '{FirstName} {Lastname}' already exists. Try another name.");
+                return;
+            }
 
             Console.Write("Enter address : ");
             string Address = Console.ReadLine();
@@ -48,7 +57,13 @@ namespace AddressBook
             }
             Console.WriteLine();
 
-            contacts.Add(new Contact(FirstName, Lastname, Address, City, State, ZipCode, PhoneNumber, Email));
+            Contact c=new Contact(FirstName, Lastname, Address, City, State, ZipCode, PhoneNumber, Email);
+            //if (contacts.Contains(c))
+            //{
+            //    Console.WriteLine($"Contact {FirstName} {Lastname} already exists.");
+            //    return;
+            //}
+            contacts.Add(c);
 
             Console.WriteLine("New contact added");
             Console.WriteLine();
@@ -214,5 +229,7 @@ namespace AddressBook
             }
             Console.WriteLine("No such contact found");
         }
+
+        
     }
 }

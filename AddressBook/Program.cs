@@ -37,6 +37,12 @@
                     case "2":
                         Console.WriteLine("Enter the name of the addressbook where you want to add the contact : ");
                         string BookName=Console.ReadLine();
+                        if (!Addressbook.ContainsKey(BookName))
+                        {
+                            Console.WriteLine("No such AddressBook exists. PLease try again");
+                            Console.WriteLine();
+                            break;
+                        }
                         Addressbook[BookName].Add();
                         break;
 
@@ -68,6 +74,7 @@
                         Console.WriteLine("Invalid input, please follow insturctions properly");
                         break;
                 }
+                Console.WriteLine();
                 Console.WriteLine("What do you want to do next");
                 Console.WriteLine();
             }      
