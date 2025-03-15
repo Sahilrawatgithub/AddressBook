@@ -230,6 +230,9 @@ namespace AddressBook
             Console.WriteLine("No such contact found");
         }
 
-        
+        public List<Contact> GetContacts()
+        {
+            return contacts;
+        }
     }
 }
