@@ -7,25 +7,49 @@ using System.Threading.Tasks;
 
 namespace AddressBook
 {
-    internal class AddressBook
+    internal class AddressBook: IAddressBook
     {
         List<Contact> contacts=new List<Contact>();
 
-        public void Add(Contact contact)
+        public void Add()
         {
-            String emailSkeleton = @"^[^@\s]+@[^@\s]+\.[^@\s]{2,10}$";
-            String phoneSkeleton = @"^(\+91[\s]?|91[\s]?)?[6-9][0-9]{9}$";
+            Console.Write("Enter first name : ");
+            string FirstName = Console.ReadLine();
 
-            Regex regEmail = new Regex(emailSkeleton);
-            Regex regPhone = new Regex(phoneSkeleton);
+            Console.Write("Enter last name : ");
+            string Lastname = Console.ReadLine();
 
-            if (! regEmail.IsMatch(contact.Email) || !regPhone.IsMatch(contact.PhoneNumber)){
-                Console.WriteLine("Invalid Email or Phone Number, could not add contact, please try again!");
-                Console.WriteLine();
+            Console.Write("Enter address : ");
+            string Address = Console.ReadLine();
+
+            Console.Write("Enter city : ");
+            string City = Console.ReadLine();
+
+            Console.Write("Enter state : ");
+            string State = Console.ReadLine();
+
+            Console.Write("Enter zip code: ");
+            string ZipCode = Console.ReadLine();
+
+            Console.Write("Enter phone number: ");
+            string PhoneNumber = Console.ReadLine();
+            if (!CheckPhone(PhoneNumber))
+            {
+                Console.WriteLine($"Invalid phone number {PhoneNumber}, please try again ");
                 return;
             }
 
-            contacts.Add(contact);
+            Console.Write("Enter email: ");
+            string Email = Console.ReadLine();
+            if (!CheckEmail(Email))
+            {
+                Console.WriteLine($"Invalid email {Email}, please try again ");
+                return;
+            }
+            Console.WriteLine();
+
+            contacts.Add(new Contact(FirstName, Lastname, Address, City, State, ZipCode, PhoneNumber, Email));
+
             Console.WriteLine("New contact added");
             Console.WriteLine();
         }
