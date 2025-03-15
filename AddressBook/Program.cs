@@ -70,67 +70,7 @@
                 }
                 Console.WriteLine("What do you want to do next");
                 Console.WriteLine();
-            }
-
-            //while (true)
-            //{
-            //    switch (Console.ReadLine())
-            //    {
-            //        case "1":
-            //            Console.Write("Enter first name : ");
-            //            string FirstName=Console.ReadLine();
-
-            //            Console.Write("Enter last name : ");
-            //            string Lastname = Console.ReadLine();
-
-            //            Console.Write("Enter address : ");
-            //            string Address = Console.ReadLine();
-
-            //            Console.Write("Enter city : ");
-            //            string City = Console.ReadLine();
-
-            //            Console.Write("Enter state : ");
-            //            string State = Console.ReadLine();
-
-            //            Console.Write("Enter zip code: ");
-            //            string ZipCode = Console.ReadLine();
-
-            //            Console.Write("Enter phone number: ");
-            //            string PhoneNumber = Console.ReadLine();
-
-            //            Console.Write("Enter email: ");
-            //            string Email = Console.ReadLine();
-            //            Console.WriteLine();
-                        
-
-            //            addressBook.Add(new Contact(FirstName, Lastname, Address, City, State, ZipCode, PhoneNumber, Email));
-
-            //            break;
-                   
-            //        case "2":
-            //            Console.Write("Enter First name of contact you want to edit : ");
-            //            string fname=Console.ReadLine();
-            //            addressBook.EditContact(fname);
-
-            //        break;
-                        
-            //        case "3":
-            //            addressBook.Display();
-            //            break;
-                    
-            //        case "4":
-            //            Console.Write("Enter firstname of contact you want to remove: ");
-            //            string firstname=Console.ReadLine();
-            //            addressBook.DeleteContact(firstname);
-            //            break;
-
-            //        case "5":
-            //            return;
-                       
-            //    }
-            //    Console.WriteLine("What do you want to do next?");
-            //    Console.WriteLine();
-            //}
+            }      
 
         }
     }
