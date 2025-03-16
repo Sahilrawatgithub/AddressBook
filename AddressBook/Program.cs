@@ -16,7 +16,8 @@
             Console.WriteLine("Press 4 if you want to Display all addressbooks with their contents");
             Console.WriteLine("Press 5 if you want to search for a person in a city or state across all Addressbooks");
             Console.WriteLine("Press 6 if you want to view contacts by location.");
-            Console.WriteLine("Press 7 if you want to exit program");
+            Console.WriteLine("Press 7 if you want to get count of people by City and State");
+            Console.WriteLine("Press 8 if you want to exit program");
             Console.WriteLine();
 
             while (true)
@@ -148,8 +149,55 @@
                         break;
 
                     case "7":
+                        Dictionary <string, int> CountByCity = new Dictionary<string, int>();
+                        foreach (var entry in Addressbook)
+                        {
+                            foreach(var contact in entry.Value.GetContacts())
+                            {
+                                if (!CountByCity.ContainsKey(contact.City))
+                                {
+                                    CountByCity[contact.City] = 1;
+                                }
+                                else
+                                {
+                                    CountByCity[contact.City]++;
+                                }
+                            }
+                        }
+
+                        foreach(var entry in CountByCity)
+                        {
+                            Console.WriteLine($"People in City {entry.Key} : {entry.Value}");
+                        }
+                        Console.WriteLine();
+
+                        Dictionary<string, int> CountByState = new Dictionary<string, int>();
+                        foreach (var entry in Addressbook)
+                        {
+                            foreach (var contact in entry.Value.GetContacts())
+                            {
+                                if (!CountByState.ContainsKey(contact.State))
+                                {
+                                    CountByState[contact.State] = 1;
+                                }
+                                else
+                                {
+                                    CountByState[contact.State]++;
+                                }
+                            }
+                        }
+                        foreach (var entry in CountByState)
+                        {
+                            Console.WriteLine($"People in State {entry.Key} : {entry.Value}");
+                        }
+                        Console.WriteLine();
+
+
+                        break;
+
+                    case "8":
                         Console.WriteLine("Exiting the system....");
-                        return;
+                    return;
 
                     default:
                         Console.WriteLine("Invalid input, please follow instructions properly");
