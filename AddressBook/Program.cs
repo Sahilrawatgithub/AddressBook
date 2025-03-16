@@ -15,7 +15,8 @@
             Console.WriteLine("Press 3 if you want to Display all adressbooks in the system");
             Console.WriteLine("Press 4 if you want to Display all addressbooks with their contents");
             Console.WriteLine("Press 5 if you want to search for a person in a city or state across all Addressbooks");
-            Console.WriteLine("Press 6 if you want to exit program");
+            Console.WriteLine("Press 6 if you want to view contacts by location.");
+            Console.WriteLine("Press 7 if you want to exit program");
             Console.WriteLine();
 
             while (true)
@@ -115,10 +116,38 @@
                             Console.WriteLine();
                         }
                         break;
-                        
-
 
                     case "6":
+                        Console.Write("Enter city or state : ");
+                        string location=Console.ReadLine();
+
+                        if (Addressbook.Count == 0)
+                        {
+                            Console.WriteLine("The addressbook system is empty");
+                            break;
+                        }
+
+                        bool exists = false;
+
+                        foreach(var entry in Addressbook)
+                        {
+                            var contacts=entry.Value.GetContacts();
+
+                            foreach(Contact contact in contacts)
+                            {
+                                if(contact.City.Equals(location,StringComparison.OrdinalIgnoreCase) || contact.State.Equals(location, StringComparison.OrdinalIgnoreCase))
+                                {
+                                    Console.WriteLine(contact);
+                                    Console.WriteLine();
+                                    exists = true;
+                                }
+                            }
+                        }
+                        if (!exists) Console.WriteLine("No contact exists in given location");
+
+                        break;
+
+                    case "7":
                         Console.WriteLine("Exiting the system....");
                         return;
 
