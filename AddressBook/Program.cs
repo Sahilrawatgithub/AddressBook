@@ -2,14 +2,14 @@
 {
     internal class Program
     {
-        
+
+        static Dictionary<string, IAddressBook> Addressbook = new Dictionary<string, IAddressBook>();
 
         static void Main(string[] args)
         {
             
-            Dictionary<string, IAddressBook> Addressbook = new Dictionary<string, IAddressBook>();
-
             Console.WriteLine("Welcome to AddressBookSystem, please adhere to following instructions to have a smooth experience");
+            Console.WriteLine("Press 0 if you want to exit...");
             Console.WriteLine("Press 1 if you want to add a new addressbook to the system");
             Console.WriteLine("Press 2 if you want to add a contact in a particular addressbook");
             Console.WriteLine("Press 3 if you want to Display all adressbooks in the system");
@@ -17,7 +17,7 @@
             Console.WriteLine("Press 5 if you want to search for a person in a city or state across all Addressbooks");
             Console.WriteLine("Press 6 if you want to view contacts by location.");
             Console.WriteLine("Press 7 if you want to get count of people by City and State");
-            Console.WriteLine("Press 8 if you want to exit program");
+            Console.WriteLine("Press 8 if you want to sort entries in an addressbook by Person's name");
             Console.WriteLine();
 
             while (true)
@@ -196,6 +196,10 @@
                         break;
 
                     case "8":
+
+
+
+                    case "0":
                         Console.WriteLine("Exiting the system....");
                     return;
 
