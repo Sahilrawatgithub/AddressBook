@@ -23,6 +23,10 @@ namespace AddressBook
         public void SortByName();
         public List<Contact> GetContacts();
 
+        public void SortByCity();
+        public void SortByState();
+
+        public void SortByZip();
         public int count();
     }
 }

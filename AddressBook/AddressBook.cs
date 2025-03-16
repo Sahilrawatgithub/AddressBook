@@ -91,7 +91,7 @@ namespace AddressBook
 
         public bool CheckZip(string zip)
         {
-            string ZipSkeleton = @"^[1-9]{6}$";
+            string ZipSkeleton = @"^[1-9][0-9]{5}$";
             Regex regex=new Regex(ZipSkeleton);
             return regex.IsMatch(zip);
         }
@@ -262,6 +262,19 @@ namespace AddressBook
         public int count()
         {
             return contacts.Count;
+        }
+
+        public void SortByCity()
+        {
+            contacts.Sort((c1,c2) => c1.City.CompareTo(c2.City));
+        }
+        public void SortByState()
+        {
+            contacts.Sort((c1,c2)=>  c1.State.CompareTo(c2.State));
+        }
+        public void SortByZip()
+        {
+            contacts.Sort((c1,c2) => c1.Zip.CompareTo(c2.Zip));
         }
     }
 }

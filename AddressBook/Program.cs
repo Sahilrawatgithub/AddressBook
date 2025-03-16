@@ -18,6 +18,9 @@
             Console.WriteLine("Press 6 if you want to view contacts by location.");
             Console.WriteLine("Press 7 if you want to get count of people by City and State");
             Console.WriteLine("Press 8 if you want to sort entries in an addressbook by Person's name");
+            Console.WriteLine("Press 9 if you want to sort entries by city");
+            Console.WriteLine("Press 10 if you want to sort entries by state");
+            Console.WriteLine("Press 11 if you want to sort entries by zip");
             Console.WriteLine();
 
             while (true)
@@ -214,6 +217,70 @@
                         Addressbook[sbook].SortByName();
                         Console.WriteLine($"Contacts in addressbook '{sbook}' have been sorted by first name! \n Here are the contents of the addressbook after sorting \n");
                         Addressbook[sbook].Display();
+                        Console.WriteLine();
+                        break;
+
+                    case "9":
+                        Console.Write("Enter the name of the addressbook you want to sort : ");
+                        string bname=Console.ReadLine();
+                        if (!Addressbook.ContainsKey(bname))
+                        {
+                            Console.WriteLine("No such addressbook exists in the system, please try again");
+                            break;
+                        }
+                        if (Addressbook[bname].count() == 0)
+                        {
+                            Console.WriteLine("No contacts in addressbook "+ bname);
+                            break;
+                        }
+
+                        Addressbook[bname].SortByCity();
+                        Console.WriteLine($"Contacts in addressbook '{bname}' have been sorted by zip!\nHere are the contents of the addressbook after sorting:\n");
+
+                        Addressbook[bname].Display();
+                        break;
+
+                    case "10":
+                        Console.Write("Enter the name of the addressbook you want to sort : ");
+                        string bookByState = Console.ReadLine();
+
+                        if (!Addressbook.ContainsKey(bookByState))
+                        {
+                            Console.WriteLine("No such addressbook exists in the system, please try again.");
+                            break;
+                        }
+
+                        if (Addressbook[bookByState].count() == 0)
+                        {
+                            Console.WriteLine($"No contacts in addressbook {bookByState}");
+                            break;
+                        }
+
+                        Addressbook[bookByState].SortByState();
+                        Console.WriteLine($"Contacts in addressbook '{bookByState}' have been sorted by state!\nHere are the contents of the addressbook after sorting:\n");
+                        Addressbook[bookByState].Display();
+                        Console.WriteLine();
+                        break;
+
+                    case "11":
+                        Console.Write("Enter the name of the addressbook you want to sort : ");
+                        string bookByZip = Console.ReadLine();
+
+                        if (!Addressbook.ContainsKey(bookByZip))
+                        {
+                            Console.WriteLine("No such addressbook exists in the system, please try again.");
+                            break;
+                        }
+
+                        if (Addressbook[bookByZip].count() == 0)
+                        {
+                            Console.WriteLine($"No contacts in addressbook {bookByZip}");
+                            break;
+                        }
+
+                        Addressbook[bookByZip].SortByZip();
+                        Console.WriteLine($"Contacts in addressbook '{bookByZip}' have been sorted by zip!\nHere are the contents of the addressbook after sorting:\n");
+                        Addressbook[bookByZip].Display();
                         Console.WriteLine();
                         break;
 
