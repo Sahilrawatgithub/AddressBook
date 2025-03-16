@@ -17,6 +17,8 @@ namespace AddressBook
         public bool CheckEmail(string email);
 
         public bool CheckPhone(string phone);
+
+        public bool CheckZip(string zip);
         public List<Contact> GetContacts();
     }
 }

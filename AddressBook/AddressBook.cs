@@ -39,6 +39,11 @@ namespace AddressBook
 
             Console.Write("Enter zip code: ");
             string ZipCode = Console.ReadLine();
+            if (!CheckZip(ZipCode))
+            {
+                Console.WriteLine($"Invalid ZipCode {ZipCode}, please try again");
+                return;
+            }
 
             Console.Write("Enter phone number: ");
             string PhoneNumber = Console.ReadLine();
@@ -82,6 +87,13 @@ namespace AddressBook
             string phoneSkeleton = @"^(\+91[\s]?91[\s]?)?[6-9][0-9]{9}$";
             Regex regPhone = new Regex(phoneSkeleton);
             return regPhone.IsMatch(phonenumber);
+        }
+
+        public bool CheckZip(string zip)
+        {
+            string ZipSkeleton = @"^[1-9]{6}$";
+            Regex regex=new Regex(zip);
+            return regex.IsMatch(ZipSkeleton);
         }
 
         public void Display()
@@ -165,6 +177,12 @@ namespace AddressBook
                             case "6":
                                 Console.Write("Enter zip code: ");
                                 string zipCode = Console.ReadLine();
+                                
+                                if (!CheckZip(zipCode))
+                                {
+                                    Console.WriteLine("Invalid ZipCode, cannot edit");
+                                    break;
+                                }
                                 contact.Zip = zipCode;
                                 Console.WriteLine("Edited zipcode");
                                 break;
