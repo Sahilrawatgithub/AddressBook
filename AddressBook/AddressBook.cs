@@ -92,8 +92,8 @@ namespace AddressBook
         public bool CheckZip(string zip)
         {
             string ZipSkeleton = @"^[1-9]{6}$";
-            Regex regex=new Regex(zip);
-            return regex.IsMatch(ZipSkeleton);
+            Regex regex=new Regex(ZipSkeleton);
+            return regex.IsMatch(zip);
         }
 
         public void Display()
