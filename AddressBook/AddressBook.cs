@@ -252,5 +252,16 @@ namespace AddressBook
         {
             return contacts;
         }
+
+        public void SortByName()
+        {
+            contacts=contacts.OrderBy(x => x.FirstName).ToList();
+            
+        }
+
+        public int count()
+        {
+            return contacts.Count;
+        }
     }
 }

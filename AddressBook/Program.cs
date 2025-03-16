@@ -197,7 +197,25 @@
 
                     case "8":
 
+                        Console.Write("Enter the name of the addressbook you want to sort : ");
+                        string sbook=Console.ReadLine();
 
+                        if (!Addressbook.ContainsKey(sbook))
+                        {
+                            Console.WriteLine("No such addressbook exists in system..");
+                            break;
+                        }
+                        if (Addressbook[sbook].count()==0)
+                        {
+                            Console.WriteLine($"No contacts in addressbook {sbook}");
+                            break;
+                        }
+
+                        Addressbook[sbook].SortByName();
+                        Console.WriteLine($"Contacts in addressbook '{sbook}' have been sorted by first name! \n Here are the contents of the addressbook after sorting \n");
+                        Addressbook[sbook].Display();
+                        Console.WriteLine();
+                        break;
 
                     case "0":
                         Console.WriteLine("Exiting the system....");
